@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SmartCA.Infrastructure.RepositoryFramework.RepositoryBase&lt;T&gt;" Collapsed="true">
+    <Position X="6.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.346" />
+  </Class>
+  <Class Name="SmartCA.Infrastructure.Repositories.SqlCeRepositoryBase&lt;T&gt;" Collapsed="true">
+    <Position X="6" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIRAAAAACEAAAChgIEgQAAgIwAAAIABCAAAAABAEAAA=</HashCode>
+      <FileName>SqlCeRepositoryBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCA.Infrastructure.Repositories.ProjectRepository" Collapsed="true">
+    <Position X="6" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIBAAAAACEAAgAggQEAAAAIAgAAAAAAAAAAAABgAAAA=</HashCode>
+      <FileName>Projects\ProjectRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Bottom" Position="0.1" />
+  </Class>
+  <Class Name="SmartCA.Infrastructure.Repositories.CompanyRepository" Collapsed="true">
+    <Position X="8.75" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIBAAAAACAAAAAAgAEAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Companies\CompanyRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Bottom" Position="0.1" />
+  </Class>
+  <Class Name="SmartCA.Infrastructure.Repositories.EmployeeRepository" Collapsed="true">
+    <Position X="2.75" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIBCAAAACAAAAAAgAEAQAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Employees\EmployeeRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Bottom" Position="0.1" />
+  </Class>
+  <Interface Name="SmartCA.Infrastructure.RepositoryFramework.IRepository&lt;T&gt;" Collapsed="true">
+    <Position X="6.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="SmartCA.Model.Projects.IProjectRepository" Collapsed="true">
+    <Position X="6" Y="5.25" Width="2" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="SmartCA.Infrastructure.RepositoryFramework.IUnitOfWorkRepository" Collapsed="true">
+    <Position X="6" Y="0.5" Width="2" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="SmartCA.Model.Companies.ICompanyRepository" Collapsed="true">
+    <Position X="8.75" Y="5.25" Width="1.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="SmartCA.Model.Employees.IEmployeeRepository" Collapsed="true">
+    <Position X="2.75" Y="5.25" Width="1.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="SmartCA.Presentation.Views.CopyToList"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding}">
+        <DataGrid.Columns>
+            <DataGridTemplateColumn>
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <Button Content="Delete" 
+							Command="{Binding 
+							RelativeSource={RelativeSource 
+							FindAncestor, AncestorType={x:Type Window}}, 
+							Path=DataContext.DeleteCopyToCommand}">
+                            <Button.CommandParameter>
+                                <Binding Path="."/>
+                            </Button.CommandParameter>
+                        </Button>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+            <DataGridTemplateColumn Header="To">
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <ComboBox 
+							ItemsSource="{Binding 
+							RelativeSource={RelativeSource 
+							FindAncestor, AncestorType={x:Type Window}}, 
+							Path=DataContext.ToList}"
+							SelectedItem="{Binding .}"
+							IsSynchronizedWithCurrentItem="True">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition />
+                                            <ColumnDefinition />
+                                            <ColumnDefinition />
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0" Text="{Binding Path=Contact.FirstName}"/>
+                                        <TextBlock Grid.Column="1" Text=" " />
+                                        <TextBlock Grid.Column="2" Text="{Binding Path=Contact.LastName}"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+            <DataGridTextColumn Header="Notes" Binding="{Binding Notes}"/>
+        </DataGrid.Columns>
+    </DataGrid>
+</UserControl>

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SmartCA.Model.ProposalRequests.ProposalRequest">
+    <Position X="5.25" Y="4.75" Width="3" />
+    <Members>
+      <Field Name="attachment" Hidden="true" />
+      <Field Name="cause" Hidden="true" />
+      <Field Name="contractor" Hidden="true" />
+      <Field Name="description" Hidden="true" />
+      <Field Name="descriptionSpecification" Hidden="true" />
+      <Field Name="expectedContractorReturnDate" Hidden="true" />
+      <Field Name="expectedContractorReturnDays" Hidden="true" />
+      <Field Name="from" Hidden="true" />
+      <Field Name="initiator" Hidden="true" />
+      <Field Name="issueDate" Hidden="true" />
+      <Field Name="number" Hidden="true" />
+      <Field Name="numberSpecification" Hidden="true" />
+      <Field Name="origin" Hidden="true" />
+      <Field Name="reason" Hidden="true" />
+      <Field Name="remarks" Hidden="true" />
+      <Field Name="to" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>SgICgEIAIoCgSSIAIEEBAAgAAIAICACIACAAQgggAgA=</HashCode>
+      <FileName>ProposalRequests\ProposalRequest.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="To" />
+      <Property Name="From" />
+      <Property Name="Contractor" />
+      <Property Name="DescriptionSpecification" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SmartCA.Model.Transmittals.Transmittal">
+    <Position X="5.5" Y="0.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AQAARgEAAECAAgJAAAICRAAAAAAEAAAAIAAgACAAIAI=</HashCode>
+      <FileName>Transmittals\Transmittal.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DeliveryMethod" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="CopyToList" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Orientation="Left" Position="0.1" />
+  </Class>
+  <Class Name="SmartCA.Model.Transmittals.CopyTo" Collapsed="true">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAEiAAAAAgAAAAAAIAAAAAAAAAAIiA=</HashCode>
+      <FileName>Transmittals\CopyTo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCA.Model.Companies.Company" Collapsed="true">
+    <Position X="10.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AGBAgABAQICAAAAAAAAAQAQAAEAMIAAACAAAAAAAACA=</HashCode>
+      <FileName>Companies\Company.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCA.Model.Employees.Employee" Collapsed="true">
+    <Position X="10.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACACAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Employees\Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCA.Model.Projects.ProjectContact" Collapsed="true">
+    <Position X="10.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAACAAAAACAAACAgAAAgAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Projects\ProjectContact.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCA.Model.ProposalRequests.ProposalRequestDescriptionSpecification">
+    <Position X="0.5" Y="6.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>ProposalRequests\ProposalRequestDescriptionSpecification.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="SmartCA.Model.Transmittals.ITransmittal">
+    <Position X="2.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AQAABgAAAEAAAgBAAAACQAAAAAAAAAAAAAAgACAAAAA=</HashCode>
+      <FileName>Transmittals\ITransmittal.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="SmartCA.Model.Transmittals.Delivery" Collapsed="true">
+    <Position X="9.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAgCAAAAAAAAAAAAAAAAAAAAAAAAAAAQEAAAE=</HashCode>
+      <FileName>Transmittals\Delivery.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

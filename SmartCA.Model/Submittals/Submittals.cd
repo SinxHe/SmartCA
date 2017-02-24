@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SmartCA.Model.Submittals.Submittal">
+    <Position X="5.75" Y="0.75" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="DeliveryMethod" Type="SmartCA.Model.Submittals.Delivery" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.75" Y="4.65" />
+        <Point X="5.375" Y="4.65" />
+        <Point X="5.375" Y="6.568" />
+        <Point X="4.25" Y="6.568" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>IwQAzgMEAMACAgIAAEs6FCgAApALEACAIQAgACAgIAc=</HashCode>
+      <FileName>Submittals\Submittal.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SpecSection" />
+      <Property Name="To" />
+      <Property Name="From" />
+      <Property Name="DeliveryMethod" />
+      <Property Name="Status" />
+      <Property Name="RemainderLocation" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="CopyToList" />
+      <Property Name="TrackingItems" />
+      <Property Name="RoutingItems" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SmartCA.Model.Submittals.CopyTo">
+    <Position X="9.25" Y="6" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Contact" Type="SmartCA.Model.Projects.ProjectContact">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="5.445" Y="2.016" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Submittals\CopyTo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Contact" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SmartCA.Model.Submittals.Discipline" Collapsed="true">
+    <Position X="13.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Submittals\Discipline.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCA.Model.Submittals.RoutingItem">
+    <Position X="13" Y="3.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Discipline" Type="SmartCA.Model.Submittals.Discipline">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.93" Y="0.298" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ACAIAgAAAAIAwAAAAIAAAAAAAAAQAAAAEAAAAAAgCAA=</HashCode>
+      <FileName>Submittals\RoutingItem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Discipline" />
+      <Property Name="Recipient" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SmartCA.Model.Submittals.TrackingItem">
+    <Position X="0.5" Y="2.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>IAQABAQECAAgAAgAIACAAAAAgAAAAAAAAAAAACAAAEQ=</HashCode>
+      <FileName>Submittals\TrackingItem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SpecSection" />
+      <Property Name="Status" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SmartCA.Model.Projects.ProjectContact">
+    <Position X="5.75" Y="6.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAACAAACAgAAAgAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Projects\ProjectContact.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCA.Model.Employees.Employee">
+    <Position X="13" Y="0.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Employees\Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCA.Model.Projects.SpecificationSection">
+    <Position X="2.75" Y="0.75" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAgQEAAIEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Projects\SpecificationSection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCA.Model.Submittals.SubmittalStatus">
+    <Position X="11" Y="4.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAQCAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Submittals\SubmittalStatus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="SmartCA.Model.Submittals.Delivery">
+    <Position X="2.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAgCAAAAAAAAAAAAAAAAAAAAAAAAAAAQEAAAE=</HashCode>
+      <FileName>Submittals\Delivery.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SmartCA.Model.Submittals.TrackingStatus">
+    <Position X="0.5" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAQAAACAAAAAAAAAAAAAABAAAAAAAAQAACAAAQQ=</HashCode>
+      <FileName>Submittals\TrackingStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SmartCA.Model.Submittals.SubmittalRemainderLocation">
+    <Position X="9.75" Y="2" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAAAAAAAAAAAAAAgAAAAAAAAAAAEAAAAAAEAAAA=</HashCode>
+      <FileName>Submittals\SubmittalRemainderLocation.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

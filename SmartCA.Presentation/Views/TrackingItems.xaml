@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="SmartCA.Presentation.Views.TrackingItems"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <DataGrid AutoGenerateColumns="False">
+        <DataGrid.Columns>
+            <DataGridTemplateColumn>
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <Button Content="Delete" 
+							Command="{Binding 
+							RelativeSource={RelativeSource 
+							FindAncestor, AncestorType={x:Type Window}}, 
+							Path=DataContext.DeleteTrackingItemCommand}">
+                            <Button.CommandParameter>
+                                <Binding Path="."/>
+                            </Button.CommandParameter>
+                        </Button>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+            <DataGridTextColumn Header="Items Received" Binding="{Binding TotalItemsReceived}"/>
+            <DataGridTextColumn Header="Qty. Sent" Binding="{Binding TotalItemsSent}"/>
+            <DataGridTextColumn Header="Deferred Approval" Binding="{Binding DeferredApproval}"/>
+            <DataGridTextColumn Header="Substitution Number" Binding="{Binding SubstitutionNumber}"/>
+            <DataGridTemplateColumn Header="Spec Section">
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <ComboBox 
+							ItemsSource="{Binding 
+							RelativeSource={RelativeSource 
+							FindAncestor, AncestorType={x:Type Window}}, 
+							Path=DataContext.SpecificationSections}"
+                            SelectedItem="{Binding SpecSection}"
+							IsSynchronizedWithCurrentItem="True"/>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+            <DataGridTextColumn Header="Description" Binding="{Binding Description}"/>
+            <DataGridTemplateColumn Header="Status">
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <ComboBox 
+							ItemsSource="{Binding 
+							RelativeSource={RelativeSource 
+							FindAncestor, AncestorType={x:Type Window}}, 
+							Path=DataContext.TrackingStatusValues}"
+                            SelectedItem="{Binding Status}"
+							IsSynchronizedWithCurrentItem="True"/>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+        </DataGrid.Columns>
+    </DataGrid>
+</UserControl>

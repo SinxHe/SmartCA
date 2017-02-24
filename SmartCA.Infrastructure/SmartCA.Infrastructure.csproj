@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9ECA514B-A757-4CA6-814E-F66B049913AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartCA.Infrastructure</RootNamespace>
+    <AssemblyName>SmartCA.Infrastructure</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DomainBase\BrokenRule.cs" />
+    <Compile Include="DomainBase\BrokenRuleMessages.cs" />
+    <Compile Include="DomainBase\EntityBase.cs" />
+    <Compile Include="DomainBase\IAggregateRoot.cs" />
+    <Compile Include="DomainBase\IEntity.cs" />
+    <Compile Include="EntityFactoryFramework\Configuration\EntityMappingCollection.cs" />
+    <Compile Include="EntityFactoryFramework\Configuration\EntityMappingConstants.cs" />
+    <Compile Include="EntityFactoryFramework\Configuration\EntityMappingElement.cs" />
+    <Compile Include="EntityFactoryFramework\Configuration\EntitySettings.cs" />
+    <Compile Include="EntityFactoryFramework\EntityFactoryBuilder.cs" />
+    <Compile Include="EntityFactoryFramework\IEntityFactory.cs" />
+    <Compile Include="Helpers\DataHelper.cs" />
+    <Compile Include="Helpers\SecurityHelper.cs" />
+    <Compile Include="RepositoryFramework\ClientTransactionRepositoryFactory.cs" />
+    <Compile Include="Helpers\Serializer.cs" />
+    <Compile Include="ReferenceData\IReferenceDataRepository.cs" />
+    <Compile Include="RepositoryFramework\ReferenceDataRepositoryFactory.cs" />
+    <Compile Include="Transactions\ClientTransaction.cs" />
+    <Compile Include="Transactions\IClientTransactionRepository.cs" />
+    <Compile Include="Transactions\ServerTransaction.cs" />
+    <Compile Include="Transactions\Transaction.cs" />
+    <Compile Include="Transactions\ClientTransactionService.cs" />
+    <Compile Include="UnitOfWork\IUnitOfWork.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryFramework\Configuration\RepositorySettings.cs" />
+    <Compile Include="RepositoryFramework\Configuration\RepositoryMappingCollection.cs" />
+    <Compile Include="RepositoryFramework\Configuration\RepositoryMappingConstants.cs" />
+    <Compile Include="RepositoryFramework\Configuration\RepositoryMappingElement.cs" />
+    <Compile Include="RepositoryFramework\IRepository.cs" />
+    <Compile Include="RepositoryFramework\IUnitOfWorkRepository.cs" />
+    <Compile Include="RepositoryFramework\RepositoryBase.cs" />
+    <Compile Include="RepositoryFramework\RepositoryFactory.cs" />
+    <Compile Include="Transactions\TransactionType.cs" />
+    <Compile Include="UnitOfWork\UnitOfWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Caching.Database.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Caching.Database.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Caching.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Caching.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Common.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Common.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.HostAdapter.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Data.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Data.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Logging.Database.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Logging.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Logging.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.Design.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Security.AzMan.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Security.AzMan.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Security.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Security.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Validation.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Validation.xml" />
+    <Content Include="EntLib30Binaries\Microsoft.Practices.ObjectBuilder.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SmartCA.DataContracts\SmartCA.DataContracts.csproj">
+      <Project>{48C646C7-98A4-4378-9DBA-810F608E24AD}</Project>
+      <Name>SmartCA.DataContracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Transactions\TransactionsClassDiagram.cd" />
+    <None Include="UnitOfWork\UnitofWorkClassDiagram.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

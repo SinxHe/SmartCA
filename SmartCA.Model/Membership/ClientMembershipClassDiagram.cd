@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SmartCA.Model.Membership.User">
+    <Position X="0.5" Y="0.5" Width="2.75" />
+    <Members>
+      <Method Name="User" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>QAAQAEAAECgMgAwsAAADAAAQAgCMEAAApQEAAIUAAEA=</HashCode>
+      <FileName>Membership\User.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Roles" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SmartCA.Model.Membership.ClientMembershipUser">
+    <Position X="4.5" Y="2.5" Width="3.5" />
+    <Members>
+      <Method Name="ClientMembershipUser" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAgAAARAAAQAAAAEAARAAEACJAQAACABAAAAQ=</HashCode>
+      <FileName>Membership\ClientMembershipUser.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PasswordFormat" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SmartCA.Model.Membership.Role">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Membership\Role.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="SmartCA.Model.Membership.PasswordFormat">
+    <Position X="9.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Membership\PasswordFormat.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

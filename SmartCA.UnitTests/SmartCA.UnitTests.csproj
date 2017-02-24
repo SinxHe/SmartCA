@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7947D92D-CCDA-424E-ABB9-96A00EC50D4D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartCA.UnitTests</RootNamespace>
+    <AssemblyName>SmartCA.UnitTests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SmartCA.Infrastructure\EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SmartCA.Infrastructure\EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data.SqlCe, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SmartCA.Infrastructure\EntLib30Binaries\Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SmartCA.Infrastructure\EntLib30Binaries\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlServerCe_unofficial.4.0.8482.1\lib\net20\System.Data.SqlServerCe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChangeOrders\ChangeOrderRepositoryTest.cs" />
+    <Compile Include="ChangeOrders\ChangeOrderTest.cs" />
+    <Compile Include="ClientMembership\ClientMembershipUserTest.cs" />
+    <Compile Include="ClientMembership\ClientMembershipServiceTest.cs" />
+    <Compile Include="Companies\CompanyRepositoryTest.cs" />
+    <Compile Include="ConstructionChangeDirectives\ConstructionChangeDirectiveRepositoryTest.cs" />
+    <Compile Include="ConstructionChangeDirectives\ConstructionChangeDirectiveTest.cs" />
+    <Compile Include="EntityBase\EntityBaseTest.cs" />
+    <Compile Include="EntityFactoryFramework\EntityFactoryBuilderTest.cs" />
+    <Compile Include="Mocks\MockEntity.cs" />
+    <Compile Include="Mocks\MockProjectRepository.cs" />
+    <Compile Include="Mocks\MockRuleMessages.cs" />
+    <Compile Include="Mocks\MockUnitOfWork.cs" />
+    <Compile Include="Projects\ProjectServiceTest.cs" />
+    <Compile Include="Projects\ProjectRepositoryTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProposalRequests\ProposalRequestRepositoryUnitTest.cs" />
+    <Compile Include="RFI\RequestForInformationRepositoryUnitTest.cs" />
+    <Compile Include="Transactions\ReferenceDataRepositoryFactoryTest.cs" />
+    <Compile Include="RepositoryFramework\RepositoryFactoryTest.cs" />
+    <Compile Include="Transactions\SqlCeTransactionRepositoryTest.cs" />
+    <Compile Include="Submittals\SubmittalRepositoryUnitTest.cs" />
+    <Compile Include="Submittals\SubmittalUnitTest.cs" />
+    <Compile Include="Transactions\SynchronizerTest.cs" />
+    <Compile Include="Transactions\TransactionRepositoryFactoryTest.cs" />
+    <Compile Include="ClientMembership\UserTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SmartCA.DataContracts.Helpers\SmartCA.DataContracts.Helpers.csproj">
+      <Project>{BFC32F0F-5076-4C48-8AE3-12FF1071931D}</Project>
+      <Name>SmartCA.DataContracts.Helpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartCA.DataContracts\SmartCA.DataContracts.csproj">
+      <Project>{48C646C7-98A4-4378-9DBA-810F608E24AD}</Project>
+      <Name>SmartCA.DataContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartCA.Infrastructure.Membership.Providers\SmartCA.Infrastructure.Membership.Providers.csproj">
+      <Project>{068C1C71-2A8F-4605-B479-1C18F5D51973}</Project>
+      <Name>SmartCA.Infrastructure.Membership.Providers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartCA.Infrastructure.Membership\SmartCA.Infrastructure.Membership.csproj">
+      <Project>{1D980E5C-B91C-4957-86BA-0C3B76C4E143}</Project>
+      <Name>SmartCA.Infrastructure.Membership</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartCA.Infrastructure.Repositories\SmartCA.Infrastructure.Repositories.csproj">
+      <Project>{27687565-02AA-4D95-8ED8-DAF29EF3AC21}</Project>
+      <Name>SmartCA.Infrastructure.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartCA.Infrastructure.Specifications\SmartCA.Infrastructure.Specifications.csproj">
+      <Project>{53E63783-EC95-4027-B3C8-4CBA4AF47C71}</Project>
+      <Name>SmartCA.Infrastructure.Specifications</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartCA.Infrastructure.Synchronization\SmartCA.Infrastructure.Synchronization.csproj">
+      <Project>{227CDD76-89D2-4123-B953-B369EFE9ADF0}</Project>
+      <Name>SmartCA.Infrastructure.Synchronization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartCA.Infrastructure\SmartCA.Infrastructure.csproj">
+      <Project>{9ECA514B-A757-4CA6-814E-F66B049913AD}</Project>
+      <Name>SmartCA.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartCA.Model\SmartCA.Model.csproj">
+      <Project>{047216A5-1F0E-4451-B558-A303D292A787}</Project>
+      <Name>SmartCA.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

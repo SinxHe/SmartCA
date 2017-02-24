@@ -1,0 +1,31 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Class="SmartCA.Presentation.MainWindow"
+    Title="Main Menu - SmartCA" 
+    Height="412" Width="496" 
+    Background="{StaticResource FormBackgroundBrush}"
+    Loaded="MainWindow_Loaded">
+    <Grid Margin="10,50,10,50">
+    
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition />
+			<ColumnDefinition />
+		</Grid.ColumnDefinitions>
+	
+    	<Button Grid.Row="0" Grid.Column="0" Name="selectProjectButton" Click="selectProjectButton_Clicked" Content="Select Project" Width="200" Margin="5,5,5,5"/>
+        <Button Grid.Row="0" Grid.Column="1" Name="projectInformationButton" Click="projectInformationButton_Clicked" Content="Project Information" Width="200" Margin="5,5,5,5"/>
+        <Button Grid.Row="1" Grid.Column="0" Name="companiesButton" Click="companiesButton_Clicked" Content="Companies"  Width="200" Margin="5,5,5,5"/>
+        <Button Grid.Row="1" Grid.Column="1" Name="submittalsButton" Click="submittalsButton_Clicked" Content="Submittals"  Width="200" Margin="5,5,5,5"/>
+        <Button Grid.Row="2" Grid.Column="0" Name="rfiButton" Click="rfiButton_Clicked" Content="RFIs"  Width="200" Margin="5,5,5,5"/>
+        <Button Grid.Row="2" Grid.Column="1" Name="proposalRequestsButton" Click="proposalRequestsButton_Clicked" Content="Proposal Requests"  Width="200" Margin="5,5,5,5"/>
+        <Button Grid.Row="3" Grid.Column="0" Name="changeOrdersButton" Click="changeOrdersButton_Clicked" Content="Change Orders"  Width="200" Margin="5,5,5,5"/>
+        <Button Grid.Row="3" Grid.Column="1" Name="constructionChangeDirectivesButton" Click="constructionChangeDirectivesButton_Clicked" Content="Construction Change Directives"  Width="200" Margin="5,5,5,5"/>
+  </Grid>
+</Window>

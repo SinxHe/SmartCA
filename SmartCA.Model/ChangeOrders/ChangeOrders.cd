@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SmartCA.Model.ChangeOrders.ChangeOrder">
+    <Position X="5.75" Y="2.5" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAQASAAEQADqQQIgMUMH2AkBCJAqYACAJACABgUAgBE=</HashCode>
+      <FileName>ChangeOrders\ChangeOrder.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Contractor" />
+      <Property Name="ChangeType" />
+      <Property Name="PriceChangeDirection" />
+      <Property Name="TimeChangeDirection" />
+      <Property Name="Status" />
+      <Property Name="NumberSpecification" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="RoutingItems" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SmartCA.Model.Companies.Company" Collapsed="true">
+    <Position X="10.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AGBAgABAQICAAAAAAAAASAQAAEAMIAAACAAAAAAAACA=</HashCode>
+      <FileName>Companies\Company.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SmartCA.Model.NumberedProjectChildren.NumberSpecification&lt;TCandidate&gt;">
+    <Position X="1" Y="4.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>NumberedProjectChildren\NumberSpecification.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCA.Model.Transmittals.RoutingItem">
+    <Position X="10.75" Y="5.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ACAIAgAAAAIAwAQAAIAEAAAAAAAQAAAAEAAAAAAgCAA=</HashCode>
+      <FileName>Transmittals\RoutingItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCA.Model.ItemStatus">
+    <Position X="2.25" Y="6.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAQCAAAEAAAAAAAAgAAAAAAAAAAAAIAAAAAAAAAAAiA=</HashCode>
+      <FileName>ItemStatus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCA.Infrastructure.Specifications.Specification&lt;TCandidate&gt;" Collapsed="true">
+    <Position X="0.75" Y="2" Width="2.25" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="SmartCA.Model.NumberedProjectChildren.INumberedProjectChild">
+    <Position X="4.25" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NumberedProjectChildren\INumberedProjectChild.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="SmartCA.Model.ChangeOrders.PriceChangeType">
+    <Position X="2.75" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>ChangeOrders\PriceChangeType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SmartCA.Model.ChangeOrders.ChangeDirection">
+    <Position X="10.5" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAABBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ChangeOrders\ChangeDirection.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="SmartCA.Presentation.Views.RoutingItems"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding}">
+        <DataGrid.Columns>
+            <DataGridTemplateColumn>
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <Button Content="Delete" 
+							Command="{Binding 
+							RelativeSource={RelativeSource 
+							FindAncestor, AncestorType={x:Type Window}}, 
+							Path=DataContext.DeleteRoutingItemCommand}">
+                            <Button.CommandParameter>
+                                <Binding Path="."/>
+                            </Button.CommandParameter>
+                        </Button>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+            <DataGridTemplateColumn Header="Discipline">
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <ComboBox 
+							DisplayMemberPath="Name"
+							ItemsSource="{Binding 
+							RelativeSource={RelativeSource 
+							FindAncestor, AncestorType={x:Type Window}}, 
+							Path=DataContext.Disciplines}"
+                            IsSynchronizedWithCurrentItem="True">
+                        </ComboBox>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+            <DataGridTextColumn Header="Routing Order" Binding="{Binding RoutingOrder}"/>
+            <DataGridTemplateColumn Header="Recipient">
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <ComboBox 
+							ItemsSource="{Binding 
+							RelativeSource={RelativeSource 
+							FindAncestor, AncestorType={x:Type Window}}, 
+							Path=DataContext.ToList}"
+                            IsSynchronizedWithCurrentItem="True">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition />
+                                            <ColumnDefinition />
+                                            <ColumnDefinition />
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0" Text="{Binding Path=Contact.FirstName}"/>
+                                        <TextBlock Grid.Column="1" Text=" " />
+                                        <TextBlock Grid.Column="2" Text="{Binding Path=Contact.LastName}"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+            <DataGridTemplateColumn Header="Date Sent">
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <DatePicker SelectedDate="{Binding DateSent}" />
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+            <DataGridTemplateColumn Header="Date Returned">
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <DatePicker SelectedDate="{Binding DateReturned}" />
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+            <DataGridTextColumn Header="Days Lapsed" Binding="{Binding DaysLapsed}" IsReadOnly="True"/>
+        </DataGrid.Columns>
+    </DataGrid>
+</UserControl>

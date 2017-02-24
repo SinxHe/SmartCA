@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="SmartCA.Presentation.Views.Addresses"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <DataGrid AutoGenerateColumns="False" Name="AddressesGrid" ItemsSource="{Binding}" >
+        <DataGrid.Columns>
+            <DataGridTemplateColumn>
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <Button Content="Delete" 
+							Command="{Binding 
+							RelativeSource={RelativeSource 
+							FindAncestor, AncestorType={x:Type Window}}, 
+							Path=DataContext.DeleteAddressCommand}">
+                            <Button.CommandParameter>
+                                <Binding Path="."/>
+                            </Button.CommandParameter>
+                        </Button>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+            <DataGridTextColumn Header="Street" Binding="{Binding Street}" />
+            <DataGridTextColumn Header="City" Binding="{Binding City}" />
+            <DataGridTextColumn Header="State" Binding="{Binding State}" />
+            <DataGridTextColumn Header="Postal Code" Binding="{Binding PostalCode}" />
+        </DataGrid.Columns>
+    </DataGrid>
+</UserControl>

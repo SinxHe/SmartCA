@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SmartCA.Model.Companies.Company">
+    <Position X="1.5" Y="1" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="HeadquartersAddress" Type="SmartCA.Model.Addresses.Address" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3" Y="3.062" />
+        <Point X="4.541" Y="3.062" Type="JumpStart" />
+        <Point X="4.708" Y="3.062" Type="JumpEnd" />
+        <Point X="5.062" Y="3.062" />
+        <Point X="5.062" Y="5.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.07" Y="0.735" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AGBAgABAQICAAAAAAAAASAQAAEAMIAAACAAAAAAAACA=</HashCode>
+      <FileName>Companies\Company.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HeadquartersAddress" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Addresses" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SmartCA.Model.Contacts.Contact">
+    <Position X="6.75" Y="1" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ACBAgAAAQKCECAAgBAAASAAAAEAAIAAAAAAAAAAICAA=</HashCode>
+      <FileName>Contacts\Contact.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CurrentCompany" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Addresses" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SmartCA.Model.Addresses.Address" Collapsed="true">
+    <Position X="4.25" Y="5.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAMoAIACCAAAAAAAoAEAAIABAAAAiA=</HashCode>
+      <FileName>Addresses\Address.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCA.Model.Projects.ProjectContact">
+    <Position X="6.75" Y="5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAACAAAIACAACCAgAAAgAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Projects\ProjectContact.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Project" />
+      <Property Name="Contact" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SmartCA.Model.Projects.Project">
+    <Position X="9.5" Y="0.75" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>pIAAiCSBAIGgw0BAgMdECgQGpgIEAaBCAFHYQIBRWAA=</HashCode>
+      <FileName>Projects\Project.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SmartCA.Infrastructure.UnitOfWork">
+    <Position X="2.25" Y="4" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="ClientTransactionRepository" Type="SmartCA.Infrastructure.Transactions.IClientTransactionRepository">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.808" Y="2.539" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AhAEAEAAAAAAAAQAAgAEAAAgAAAAAAAAAAgAAAEAAAA=</HashCode>
+      <FileName>UnitOfWork\UnitOfWork.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ClientTransactionRepository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="SmartCA.Infrastructure.IUnitOfWork">
+    <Position X="2.25" Y="0.75" Width="2.75" />
+    <AssociationLine Name="ClientTransactionRepository" Type="SmartCA.Infrastructure.Transactions.IClientTransactionRepository">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.495" Y="0.102" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AhAAAEAAAAAAAAQAAAAAAAAgAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>UnitOfWork\IUnitOfWork.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ClientTransactionRepository" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="SmartCA.Infrastructure.Transactions.IClientTransactionRepository">
+    <Position X="7.5" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAABAAAAAAAAAAAAAAEAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Transactions\IClientTransactionRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,315 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="SmartCA.Presentation.Views.ProjectInformationView"
+	Title="Project Information"
+	Width="700" Height="700" Background="{StaticResource FormBackgroundBrush}">	
+	<Window.Resources>
+		<DataTemplate x:Key="ProjectNameAndNumber">
+			<Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Column="0" Grid.Row="0" Content="Project Number:" 
+					Style="{StaticResource boldLabelStyle}"/>
+                <Label Grid.Column="1" Grid.Row="0" 
+					Content="{Binding Path=CurrentEntity.Number}" 
+					x:Name="ProjectNumber" 
+					Style="{StaticResource baseLabelStyle}"/>
+                <TextBox Grid.Column="1" Grid.Row="0" Visibility="Hidden" 
+					Text="{Binding Path=NewProjectNumber}" 
+					x:Name="NewProjectNumber"/>
+                <Label Grid.Column="0" Grid.Row="1" Content="Project Name:" 
+					Style="{StaticResource boldLabelStyle}"/>
+                <Label Grid.Column="1" Grid.Row="1" 
+					Content="{Binding Path=CurrentEntity.Name}" 
+					x:Name="ProjectName" 
+					Style="{StaticResource baseLabelStyle}"/>
+                <TextBox Grid.Column="1" Grid.Row="1" Visibility="Hidden" 
+					x:Name="NewProjectName" 
+					Text="{Binding Path=NewProjectName}" 
+					Style="{StaticResource baseTextBoxStyle}"/>					
+			</Grid>
+			<DataTemplate.Triggers>
+				<DataTrigger Binding="{Binding Path=CurrentObjectState}" Value="New">					
+					<Setter Property="Visibility" Value="Visible" 
+						TargetName="NewProjectNumber" />						
+					<Setter Property="Visibility" Value="Visible" 
+						TargetName="NewProjectName" />						
+					<Setter Property="Visibility" Value="Hidden" 
+						TargetName="ProjectNumber" />						
+					<Setter Property="Visibility" Value="Hidden" 
+						TargetName="ProjectName" />						
+				</DataTrigger>
+			</DataTemplate.Triggers>
+		</DataTemplate>
+		<DataTemplate x:Key="OwnerInformation">
+			<Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+				<Label Grid.Column="0" Grid.Row="0" Content="Owner Name:" Style="{StaticResource boldLabelStyle}"/>
+				<TextBox Grid.Column="1" Grid.Row="0" Text="{Binding Path=CurrentEntity.Owner.Name}" Style="{StaticResource baseTextBoxStyle}"/>
+				<ComboBox Grid.Column="1" Grid.Row="1" IsSynchronizedWithCurrentItem="True" 
+					Width="200" SelectedItem="{Binding Path=CurrentEntity.Owner}"
+					ItemsSource="{Binding Path=Owners}" IsEditable="True"
+					TextSearch.TextPath="Name"
+					DisplayMemberPath="Name"
+					Style="{StaticResource baseComboBoxStyle}">
+				</ComboBox>
+                <Label Grid.Column="0" Grid.Row="2" Content="Owner Abbrev.:" Style="{StaticResource boldLabelStyle}"/>
+                <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding Path=CurrentEntity.Owner.Abbreviation}" Style="{StaticResource baseTextBoxStyle}"/>
+                <Label Grid.Column="0" Grid.Row="3" Content="Owner Address:" Style="{StaticResource boldLabelStyle}"/>
+                <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding Path=ProjectOwnerHeadquartersAddress.Street}" Style="{StaticResource baseTextBoxStyle}"/>
+                <Label Grid.Column="0" Grid.Row="4" Content="Owner City:" Style="{StaticResource boldLabelStyle}"/>
+                <TextBox Grid.Column="1" Grid.Row="4" Text="{Binding Path=ProjectOwnerHeadquartersAddress.City}" Style="{StaticResource baseTextBoxStyle}"/>
+                <Label Grid.Column="0" Grid.Row="5" Content="Owner State:" Style="{StaticResource boldLabelStyle}"/>
+                <TextBox Grid.Column="1" Grid.Row="5" Text="{Binding Path=ProjectOwnerHeadquartersAddress.State}" Style="{StaticResource baseTextBoxStyle}"/>
+                <Label Grid.Column="0" Grid.Row="6" Content="Owner Zip:" Style="{StaticResource boldLabelStyle}"/>
+                <TextBox Grid.Column="1" Grid.Row="6" Text="{Binding Path=ProjectOwnerHeadquartersAddress.PostalCode}" Style="{StaticResource baseTextBoxStyle}"/>
+			</Grid>
+		</DataTemplate>
+	</Window.Resources>
+	<Grid x:Name="LayoutRoot">
+		<TabControl Margin="80,40,64,80" IsSynchronizedWithCurrentItem="True">
+			<TabItem Header="Contact Info">
+                <Grid Margin="35,13.04,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+					<ContentControl Grid.ColumnSpan="2" Grid.Row="0" Content="{Binding}" ContentTemplate="{StaticResource ProjectNameAndNumber}"/>
+					<Label Grid.Column="0" Grid.Row="1" Content="Project Address:" 
+						Style="{StaticResource boldLabelStyle}"/>
+					<TextBox Grid.Column="1" Grid.Row="1"
+						Text="{Binding Path=ProjectAddress.Street}" 
+						Style="{StaticResource baseTextBoxStyle}"/>
+                    <Label Grid.Column="0" Grid.Row="2" Content="Project City:" 
+						Style="{StaticResource boldLabelStyle}"/>
+                    <TextBox Grid.Column="1" Grid.Row="2" 
+						Text="{Binding Path=ProjectAddress.City}" 
+						Style="{StaticResource baseTextBoxStyle}"/>
+                    <Label Grid.Column="0" Grid.Row="3" Content="Project State:" 
+						Style="{StaticResource boldLabelStyle}"/>
+                    <TextBox Grid.Column="1" Grid.Row="3"
+						Text="{Binding Path=ProjectAddress.State}" 
+						Style="{StaticResource baseTextBoxStyle}"/>
+                    <Label Grid.Column="0" Grid.Row="4" Content="Project Zip:" 
+						Style="{StaticResource boldLabelStyle}"/>
+                    <TextBox Grid.Column="1" Grid.Row="4" 
+						Text="{Binding Path=ProjectAddress.PostalCode}" 
+						Style="{StaticResource baseTextBoxStyle}"/>
+					<ContentControl Grid.ColumnSpan="2" Grid.Row="5" Content="{Binding}" ContentTemplate="{StaticResource OwnerInformation}"/>
+                    <Label Grid.Column="0" Grid.Row="6" Content="CA Name/Title:" Style="{StaticResource boldLabelStyle}"/>
+                    <ComboBox Grid.Column="1" Grid.Row="6" IsSynchronizedWithCurrentItem="True" 
+						Width="200" SelectedItem="{Binding Path=CurrentEntity.ConstructionAdministrator}"
+						ItemsSource="{Binding Path=ConstructionAdministrators}" IsEditable="True"
+						TextSearch.TextPath="FirstName"
+						Style="{StaticResource baseComboBoxStyle}">
+						<ComboBox.ItemTemplate>
+							<DataTemplate>
+								<Grid>
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition />
+										<ColumnDefinition />
+										<ColumnDefinition />
+										<ColumnDefinition />
+										<ColumnDefinition />
+									</Grid.ColumnDefinitions>
+									<TextBlock Grid.Column="0" Text="{Binding Path=FirstName}"/>
+									<TextBlock Grid.Column="1" Text=" " />
+									<TextBlock Grid.Column="2" Text="{Binding Path=LastName}"/>
+									<TextBlock Grid.Column="3" Text=", " />
+									<TextBlock Grid.Column="4" Text="{Binding Path=JobTitle}" />
+								</Grid>
+							</DataTemplate>
+						</ComboBox.ItemTemplate>
+					</ComboBox>
+                    <Label Grid.Column="0" Grid.Row="7" Content="Principal-In-Charge:" Style="{StaticResource boldLabelStyle}"/>
+                    <ComboBox Grid.Column="1" Grid.Row="7" IsSynchronizedWithCurrentItem="True" 
+						Width="200" Height="Auto" SelectedItem="{Binding Path=CurrentEntity.PrincipalInCharge}"
+						ItemsSource="{Binding Path=Principals}" IsEditable="True"
+						TextSearch.TextPath="FirstName"
+						Style="{StaticResource baseComboBoxStyle}">
+						<ComboBox.ItemTemplate>
+							<DataTemplate>
+								<Grid>
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition />
+										<ColumnDefinition />
+										<ColumnDefinition />
+									</Grid.ColumnDefinitions>
+									<TextBlock Grid.Column="0" Text="{Binding Path=FirstName}"/>
+									<TextBlock Grid.Column="1" Text=" " />
+									<TextBlock Grid.Column="2" Text="{Binding Path=LastName}"/>
+								</Grid>
+							</DataTemplate>
+						</ComboBox.ItemTemplate>
+					</ComboBox>
+				</Grid>
+			</TabItem>
+			<TabItem Header="Details">
+                <Grid Margin="35,13.04,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+					<Label Grid.Column="0" Grid.Row="0" Content="Agency App. No:" Style="{StaticResource boldLabelStyle}"/>
+					<TextBox Grid.Column="1" Grid.Row="0" Text="{Binding Path=CurrentEntity.AgencyApplicationNumber}" Style="{StaticResource baseTextBoxStyle}"/>
+                    <Label Grid.Column="0" Grid.Row="1" Content="Agency File. No:" Style="{StaticResource boldLabelStyle}"/>
+                    <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding Path=CurrentEntity.AgencyFileNumber}" Style="{StaticResource baseTextBoxStyle}"/>
+                    <Label Grid.Column="0" Grid.Row="2" Content="Contract Date:" Style="{StaticResource boldLabelStyle}"/>
+                    <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding Path=CurrentEntity.ContractDate}" Style="{StaticResource baseTextBoxStyle}"/>
+                    <Label Grid.Column="0" Grid.Row="3" Content="Contract Reason:" Style="{StaticResource boldLabelStyle}"/>
+                    <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding Path=CurrentEntity.ContractReason}" Style="{StaticResource baseTextBoxStyle}"/>
+                    <Label Grid.Column="0" Grid.Row="4" Content="Total Square Feet:" Style="{StaticResource boldLabelStyle}"/>
+                    <TextBox Grid.Column="1" Grid.Row="4" Text="{Binding Path=CurrentEntity.TotalSquareFeet}" Style="{StaticResource baseTextBoxStyle}"/>
+                    <Label Grid.Column="0" Grid.Row="5" Content="Est. Start Date:" Style="{StaticResource boldLabelStyle}"/>
+                    <TextBox Grid.Column="1" Grid.Row="5" Text="{Binding Path=CurrentEntity.EstimatedStartDate}" Style="{StaticResource baseTextBoxStyle}"/>
+                    <Label Grid.Column="0" Grid.Row="6" Content="Est. Compl. Date:" Style="{StaticResource boldLabelStyle}"/>
+                    <TextBox Grid.Column="1" Grid.Row="6" Text="{Binding Path=CurrentEntity.EstimatedCompletionDate}" Style="{StaticResource baseTextBoxStyle}"/>
+                    <Label Grid.Column="0" Grid.Row="7" Content="Adj. Compl. Date:" Style="{StaticResource boldLabelStyle}"/>
+                    <Label Grid.Column="1" Grid.Row="7" Content="{Binding Path=CurrentEntity.AdjustedCompletionDate}" Style="{StaticResource baseLabelStyle}"/>
+                    <Label Grid.Column="0" Grid.Row="8" Content="Actual Compl. Date:" Style="{StaticResource boldLabelStyle}"/>
+                    <TextBox Grid.Column="1" Grid.Row="8" Text="{Binding Path=CurrentEntity.ActualCompletionDate}" Style="{StaticResource baseTextBoxStyle}"/>
+                    <Label Grid.Column="0" Grid.Row="9" Content="Orig. Const. Cost:" Style="{StaticResource boldLabelStyle}"/>
+                    <TextBox Grid.Column="1" Grid.Row="9" Text="{Binding Path=CurrentEntity.OriginalConstructionCost}" Style="{StaticResource baseTextBoxStyle}"/>
+                    <Label Grid.Column="0" Grid.Row="10" Content="Total CO's:" Style="{StaticResource boldLabelStyle}"/>
+                    <Label Grid.Column="1" Grid.Row="10" Content="{Binding Path=CurrentEntity.TotalChangeOrdersAmount}" Style="{StaticResource baseLabelStyle}"/>
+                    <Label Grid.Column="0" Grid.Row="11" Content="Adj. Const. Cost:" Style="{StaticResource boldLabelStyle}"/>
+                    <Label Grid.Column="1" Grid.Row="11" Content="{Binding Path=CurrentEntity.AdjustedConstructionCost}" Style="{StaticResource baseLabelStyle}"/>
+                    <Label Grid.Column="0" Grid.Row="12" Content="Total CO Days:" Style="{StaticResource boldLabelStyle}"/>
+                    <Label Grid.Column="1" Grid.Row="12" Content="{Binding Path=CurrentEntity.TotalChangeOrderDays}" Style="{StaticResource baseLabelStyle}"/>
+                    <Label Grid.Column="0" Grid.Row="13" Content="A &amp; E CO:" Style="{StaticResource boldLabelStyle}"/>
+                    <Label Grid.Column="1" Grid.Row="13" Content="{Binding Path=CurrentEntity.AeChangeOrderAmount}" Style="{StaticResource baseLabelStyle}"/>
+                    <Label Grid.Column="0" Grid.Row="14" Content="Percent Complete:" Style="{StaticResource boldLabelStyle}"/>
+                    <TextBox Grid.Column="1" Grid.Row="14" Text="{Binding Path=CurrentEntity.PercentComplete}" Style="{StaticResource baseTextBoxStyle}"/>
+                    <Label Grid.Column="0" Grid.Row="15" Content="Remarks:" Style="{StaticResource boldLabelStyle}"/>
+                    <TextBox Grid.Column="1" Grid.Row="15" TextWrapping="Wrap" Text="{Binding Path=CurrentEntity.Remarks}" Style="{StaticResource baseTextBoxStyle}"/>
+				</Grid>
+			</TabItem>
+			<TabItem Header="Marketing Info">
+                <Grid Margin="35,13.04,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+					<Label Grid.Column="0" Grid.Row="0" Content="Market Segment:" Style="{StaticResource boldLabelStyle}"/>
+                    <ComboBox Grid.Column="1" Grid.Row="0" IsSynchronizedWithCurrentItem="True" 
+						Width="200" SelectedItem="{Binding Path=CurrentEntity.Segment}"
+						ItemsSource="{Binding Path=MarketSegments}" IsEditable="True"
+						TextSearch.TextPath="Name"
+						Style="{StaticResource baseComboBoxStyle}">
+						<ComboBox.ItemTemplate>
+							<DataTemplate>
+								<Grid>
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition />
+										<ColumnDefinition />
+										<ColumnDefinition />
+									</Grid.ColumnDefinitions>
+									<TextBlock Grid.Column="0" Text="{Binding Path=ParentSector.Name}"/>
+									<TextBlock Grid.Column="1" Text=" - " />
+									<TextBlock Grid.Column="2" Text="{Binding Path=Name}" />
+								</Grid>
+							</DataTemplate>
+						</ComboBox.ItemTemplate>
+					</ComboBox>
+				</Grid>
+			</TabItem>
+			<TabItem Header="Allowances">
+                <Grid Margin="35,13.04,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+					<Label Grid.Column="0" Grid.Row="0" Content="Cont. Allowance:" Style="{StaticResource boldLabelStyle}"/>
+                    <TextBox Grid.Column="1" Grid.Row="0" Text="{Binding Path=CurrentEntity.ContingencyAllowanceAmount}" Style="{StaticResource baseTextBoxStyle}"/>
+                    <Label Grid.Column="0" Grid.Row="1" Content="Testing Allowance:" Style="{StaticResource boldLabelStyle}"/>
+                    <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding Path=CurrentEntity.TestingAllowanceAmount}" Style="{StaticResource baseTextBoxStyle}"/>
+                    <Label Grid.Column="0" Grid.Row="2" Content="Utility Allowance:" Style="{StaticResource boldLabelStyle}"/>
+                    <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding Path=CurrentEntity.UtilityAllowanceAmount}" Style="{StaticResource baseTextBoxStyle}"/>
+                    <Label Grid.Column="0" Grid.Row="3" Content="Other Allowances:" Style="{StaticResource boldLabelStyle}"/>
+                    <ListView Grid.Column="1" Grid.Row="3" ItemsSource="{Binding Path=CurrentEntity.Allowances}">
+						<ListView.View>
+							<GridView>
+								<GridViewColumn Header="Allowance Name" Width="Auto">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox TextWrapping="WrapWithOverflow" Text="{Binding Path=Title, Mode=OneWay}" Style="{StaticResource baseTextBoxStyle}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Allowance Value" Width="Auto">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox Text="{Binding Path=Amount, Mode=OneWay}" Style="{StaticResource baseTextBoxStyle}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+							</GridView>
+						</ListView.View>
+					</ListView>
+				</Grid>
+			</TabItem>
+		</TabControl>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+            <Button Margin="5,5,5,20" Command="{Binding Path=CancelCommand}">Cancel</Button>
+            <Button Margin="5,5,5,20" Command="{Binding Path=ContactsCommand}">Project Contacts</Button>
+            <Button Margin="5,5,5,20" Command="{Binding Path=NewCommand}">New Project</Button>
+            <Button Margin="5,5,5,20" Command="{Binding Path=SaveCommand}">Save</Button>
+        </StackPanel>
+  </Grid>	
+</Window>

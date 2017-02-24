@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{047216A5-1F0E-4451-B558-A303D292A787}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartCA.Model</RootNamespace>
+    <AssemblyName>SmartCA.Model</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Addresses\Address.cs" />
+    <Compile Include="Addresses\IHasAddresses.cs" />
+    <Compile Include="ChangeOrders\ChangeDirection.cs" />
+    <Compile Include="ChangeOrders\ChangeOrder.cs" />
+    <Compile Include="ChangeOrders\ChangeOrderRuleMessages.cs" />
+    <Compile Include="ChangeOrders\ChangeOrderService.cs" />
+    <Compile Include="ChangeOrders\IChangeOrderRepository.cs" />
+    <Compile Include="Companies\CompanyRuleMessages.cs" />
+    <Compile Include="ConstructionChangeDirectives\ConstructionChangeDirective.cs" />
+    <Compile Include="ConstructionChangeDirectives\ConstructionChangeDirectiveRuleMessages.cs" />
+    <Compile Include="ConstructionChangeDirectives\ConstructionChangeDirectiveService.cs" />
+    <Compile Include="ConstructionChangeDirectives\IConstructionChangeDirectiveRepository.cs" />
+    <Compile Include="Contacts\ContactRuleMessages.cs" />
+    <Compile Include="Description\DescriptionRuleMessageKeys.cs" />
+    <Compile Include="Description\IDescribable.cs" />
+    <Compile Include="Employees\EmployeeRuleMessages.cs" />
+    <Compile Include="Membership\Application.cs" />
+    <Compile Include="Membership\ClientMembershipUser.cs" />
+    <Compile Include="Membership\ClientMembershipService.cs" />
+    <Compile Include="Membership\IClientMembershipProvider.cs" />
+    <Compile Include="Membership\PasswordFormat.cs" />
+    <Compile Include="Membership\Role.cs" />
+    <Compile Include="Membership\User.cs" />
+    <Compile Include="NumberedProjectChildren\NumberedProjectChildFactory.cs" />
+    <Compile Include="NumberedProjectChildren\NumberedProjectChildrenRuleMessageKeys.cs" />
+    <Compile Include="NumberedProjectChildren\NumberedProjectChildValidator.cs" />
+    <Compile Include="NumberedProjectChildren\NumberSpecification.cs" />
+    <Compile Include="ChangeOrders\PriceChangeType.cs" />
+    <Compile Include="Companies\Company.cs" />
+    <Compile Include="Companies\CompanyService.cs" />
+    <Compile Include="Companies\ICompanyRepository.cs" />
+    <Compile Include="Contacts\Contact.cs" />
+    <Compile Include="Contacts\ContactService.cs" />
+    <Compile Include="Contacts\IContactRepository.cs" />
+    <Compile Include="NumberedProjectChildren\INumberedProjectChild.cs" />
+    <Compile Include="NumberedProjectChildren\INumberedProjectChildRepository.cs" />
+    <Compile Include="Projects\ContractRuleMessages.cs" />
+    <Compile Include="Projects\MarketSectorRuleMessages.cs" />
+    <Compile Include="Projects\MarketSegmentRuleMessages.cs" />
+    <Compile Include="Projects\ProjectContactRuleMessages.cs" />
+    <Compile Include="Projects\ProjectRuleMessages.cs" />
+    <Compile Include="ProposalRequests\IProposalRequestRepository.cs" />
+    <Compile Include="ProposalRequests\ProposalRequest.cs" />
+    <Compile Include="ProposalRequests\ProposalRequestRuleMessages.cs" />
+    <Compile Include="ProposalRequests\ProposalRequestService.cs" />
+    <Compile Include="RFI\RequestForInformationDateSpecification.cs" />
+    <Compile Include="RFI\IRequestForInformationRepository.cs" />
+    <Compile Include="RFI\RequestForInformationQuestionAnswerSpecification.cs" />
+    <Compile Include="RFI\RequestForInformation.cs" />
+    <Compile Include="RFI\RequestForInformationRuleMessages.cs" />
+    <Compile Include="RFI\RequestForInformationService.cs" />
+    <Compile Include="Submittals\ISubmittalRepository.cs" />
+    <Compile Include="Submittals\SubmittalRemainderLocation.cs" />
+    <Compile Include="Submittals\SubmittalRuleMessages.cs" />
+    <Compile Include="Submittals\SubmittalService.cs" />
+    <Compile Include="ItemStatus.cs" />
+    <Compile Include="Transmittals\Delivery.cs" />
+    <Compile Include="Employees\Employee.cs" />
+    <Compile Include="Employees\EmployeeService.cs" />
+    <Compile Include="Employees\IEmployeeRepository.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="Projects\Allowance.cs" />
+    <Compile Include="Projects\Contract.cs" />
+    <Compile Include="Projects\IProjectRepository.cs" />
+    <Compile Include="Projects\MarketSector.cs" />
+    <Compile Include="Projects\Project.cs" />
+    <Compile Include="Projects\ProjectContact.cs" />
+    <Compile Include="Projects\ProjectService.cs" />
+    <Compile Include="Submittals\SpecificationSection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Projects\MarketSegment.cs" />
+    <Compile Include="OfficeLocation.cs" />
+    <Compile Include="Transmittals\CopyTo.cs" />
+    <Compile Include="Discipline.cs" />
+    <Compile Include="Description\DescriptionSpecification.cs" />
+    <Compile Include="Transmittals\IHasRoutingItems.cs" />
+    <Compile Include="Transmittals\IRoutableTransmittal.cs" />
+    <Compile Include="Transmittals\RoutableTransmittal.cs" />
+    <Compile Include="Transmittals\RoutingItem.cs" />
+    <Compile Include="Submittals\TrackingItem.cs" />
+    <Compile Include="Submittals\Submittal.cs" />
+    <Compile Include="Submittals\ActionStatus.cs" />
+    <Compile Include="Transmittals\ITransmittal.cs" />
+    <Compile Include="Transmittals\Transmittal.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SmartCA.Infrastructure.Membership\SmartCA.Infrastructure.Membership.csproj">
+      <Project>{1D980E5C-B91C-4957-86BA-0C3B76C4E143}</Project>
+      <Name>SmartCA.Infrastructure.Membership</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartCA.Infrastructure.Specifications\SmartCA.Infrastructure.Specifications.csproj">
+      <Project>{53E63783-EC95-4027-B3C8-4CBA4AF47C71}</Project>
+      <Name>SmartCA.Infrastructure.Specifications</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartCA.Infrastructure\SmartCA.Infrastructure.csproj">
+      <Project>{9ECA514B-A757-4CA6-814E-F66B049913AD}</Project>
+      <Name>SmartCA.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ChangeOrders\ChangeOrders.cd" />
+    <None Include="CompaniesAndContacts.cd" />
+    <None Include="ConstructionChangeDirectives\ConstructionChangeDirectives.cd" />
+    <None Include="Membership\ClientMembershipClassDiagram.cd" />
+    <None Include="Projects\Projects.cd" />
+    <None Include="ProposalRequests\ProposalRequests.cd" />
+    <None Include="RFI\RFIs.cd" />
+    <None Include="Submittals\Submittals.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

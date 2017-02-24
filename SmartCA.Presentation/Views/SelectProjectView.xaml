@@ -1,0 +1,40 @@
+﻿<Window x:Class="SmartCA.Presentation.Views.SelectProjectView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vm="clr-namespace:SmartCA.Presentation.ViewModels"
+    Title="SelectProjectView" Height="300" Width="437" 
+    Background="{StaticResource FormBackgroundBrush}">
+    <Grid>
+    <ComboBox  Height="26" Margin="175.993333333333,98,28.006666666667,0" 
+		Name="projectsComboBox" VerticalAlignment="Top" 
+		IsSynchronizedWithCurrentItem="True" 
+		TextSearch.TextPath="Name"
+		ItemsSource="{Binding Path=Projects}" IsTextSearchEnabled="True"
+		IsEditable="True">
+		<ComboBox.ItemTemplate>
+			<DataTemplate>
+				<Grid ShowGridLines="True" >
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="50" />
+						<ColumnDefinition />
+					</Grid.ColumnDefinitions>
+					<TextBlock Grid.Column="0" Text="{Binding Path=Number}"/>
+					<TextBlock Grid.Column="1" Text="{Binding Path=Name}" />
+				</Grid>
+			</DataTemplate>
+		</ComboBox.ItemTemplate>
+    </ComboBox>
+    <Label Margin="47,42,0,0" Name="selectProjectLabel" 
+		Style="{StaticResource boldLabelStyle}" 
+		VerticalAlignment="Top" HorizontalAlignment="Left" 
+		Width="153">Please select a Project...</Label>
+    <Label Margin="47,98.04,0,0" Name="projectLabel" 
+		Style="{StaticResource boldLabelStyle}">Project:</Label>
+    <Button Margin="47,0,0,35" Name="cancelButton" 
+		Command="{Binding Path=CancelCommand}" 
+		HorizontalAlignment="Left" VerticalAlignment="Bottom">Cancel</Button>
+    <Button Margin="0,0,28.006666666667,35" Name="okButton" 
+		Command="{Binding Path=SelectCommand}" 
+		HorizontalAlignment="Right" VerticalAlignment="Bottom">OK</Button>
+  </Grid>
+</Window>

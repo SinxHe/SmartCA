@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SmartCA.Model.Projects.Project" Collapsed="true">
+    <Position X="5.25" Y="2" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="ConstructionAdministrator" Type="SmartCA.Model.Employees.Employee">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.214" Y="-0.336" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="PrincipalInCharge" Type="SmartCA.Model.Employees.Employee" FixedToPoint="true">
+      <Path>
+        <Point X="8" Y="2.25" />
+        <Point X="10.438" Y="2.25" />
+        <Point X="10.438" Y="2.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.196" Y="0.276" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Allowances" Type="SmartCA.Model.Projects.Allowance">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.002" Y="0.287" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Address" Type="SmartCA.Model.Address" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.25" Y="2.487" />
+        <Point X="3.625" Y="2.487" />
+        <Point X="3.625" Y="3.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.848" Y="0.133" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>oIAAiCCBAIEgw0BAgMdEAgQGpgIEAaBCAFHYQIBRWAA=</HashCode>
+      <FileName>Projects\Project.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Owner" />
+      <Property Name="ConstructionAdministrator" />
+      <Property Name="PrincipalInCharge" />
+      <Property Name="Segment" />
+      <Property Name="Address" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Allowances" />
+      <Property Name="Contracts" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SmartCA.Model.Projects.MarketSegment" Collapsed="true">
+    <Position X="4.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAgAAQAIAAEAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Projects\MarketSegment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCA.Model.Employees.Employee" Collapsed="true">
+    <Position X="10" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Employees\Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCA.Model.Companies.Company" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <AssociationLine Name="HeadquartersAddress" Type="SmartCA.Model.Address">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.961" Y="0.339" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AEAAAABAAAAAAAAAAAAAAAQAAAIMAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Companies\Company.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HeadquartersAddress" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SmartCA.Model.Projects.Allowance" Collapsed="true">
+    <Position X="7.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAEAAAAAAAACAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Projects\Allowance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCA.Model.Projects.MarketSector" Collapsed="true">
+    <Position X="4.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAQAACAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Projects\MarketSector.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Segments" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SmartCA.Model.Projects.Contract" Collapsed="true">
+    <Position X="7" Y="6" Width="1.5" />
+    <AssociationLine Name="Contractor" Type="SmartCA.Model.Companies.Company" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7" Y="6.35" />
+        <Point X="1.438" Y="6.35" />
+        <Point X="1.438" Y="2.441" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.174" Y="0.203" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAgAIAAIAAAAAAAAAIBAAACEAAEAAAABAIA=</HashCode>
+      <FileName>Projects\Contract.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Contractor" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SmartCA.Model.Person" Collapsed="true">
+    <Position X="10" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAABAAAAAAACAAAAAgAAAAAAAAAAACAAAAAg=</HashCode>
+      <FileName>Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCA.Model.Address" Collapsed="true">
+    <Position X="2.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAIIAAACCAAAAAAAgAEAAIABAAAAAA=</HashCode>
+      <FileName>Address.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

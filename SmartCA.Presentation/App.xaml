@@ -1,0 +1,42 @@
+﻿<Application
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Class="SmartCA.Presentation.App"
+    StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    	<SolidColorBrush x:Key="FormBackgroundBrush" Color="#FFD0DBE2"/>
+		
+		<Style x:Key="baseLabelStyle" TargetType="{x:Type Label}">
+            <Setter Property="Padding" Value="0" />
+        </Style>
+		
+		<Style x:Key="boldLabelStyle" BasedOn="{StaticResource baseLabelStyle}" TargetType="{x:Type Label}">
+			<Setter Property="FontWeight" Value="Bold"/>
+      	</Style>
+      	
+      	<Style x:Key="headerLabelStyle" BasedOn="{StaticResource boldLabelStyle}" TargetType="{x:Type Label}">
+			<Setter Property="FontSize" Value="20" />
+			<Setter Property="FontWeight" Value="Bold" />
+		</Style>
+		
+		<Style x:Key="baseTextBoxStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="Width" Value="200"/>
+        </Style>
+        
+        <Style x:Key="baseComboBoxStyle" TargetType="{x:Type ComboBox}">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+        </Style>
+        
+        <Style x:Key="baseTextBlockStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="Height" Value="75"/>
+			<Setter Property="Width" Value="300"/>
+        </Style>
+		
+		<Style TargetType="{x:Type Button}">
+            <Setter Property="Width" Value="100"/>
+        </Style>
+
+    </Application.Resources>
+</Application>

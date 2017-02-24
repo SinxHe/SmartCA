@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SmartCA.Infrastructure.Repositories.SqlCeRepositoryBase&lt;T&gt;" Collapsed="true">
+    <Position X="5.25" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AJRACSAACEAAAChgAEgQAAgIwAAgIABDAAAAABAEAAg=</HashCode>
+      <FileName>SqlCeRepositoryBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCA.Infrastructure.Repositories.RequestForInformationRepository" Collapsed="true">
+    <Position X="4.75" Y="5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AJBAAAAACAAAAAggAEAAAAAAAAAgAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>RFI\RequestForInformationRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SmartCA.Infrastructure.Repositories.Transmittals.SqlCeTransmittalRepository&lt;T&gt;">
+    <Position X="5" Y="1.75" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAEAABAAgAAAA=</HashCode>
+      <FileName>Transmittals\SqlCeTransmittalRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCA.Infrastructure.Repositories.Transmittals.SqlCeRoutableTransmittalRepository&lt;T&gt;" Collapsed="true">
+    <Position X="4.75" Y="3.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAABAABAA=</HashCode>
+      <FileName>Transmittals\SqlCeRoutableTransmittalRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="SmartCA.Model.RFI.IRequestForInformationRepository" Collapsed="true">
+    <Position X="5" Y="6.25" Width="2.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="SmartCA.Infrastructure.RepositoryFramework.IRepository&lt;T&gt;" Collapsed="true">
+    <Position X="5.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

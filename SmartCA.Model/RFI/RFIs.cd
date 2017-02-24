@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SmartCA.Model.RFI.RequestForInformation">
+    <Position X="6.5" Y="0.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="NumberSpecification" Type="SmartCA.Model.RFI.RequestForInformationNumberSpecification">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-2.202" Y="0.383" Height="0.182" Width="1.951" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="QuestionAnswerSpecification" Type="SmartCA.Model.RFI.RequestForInformationQuestionAnswerSpecification">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.068" Y="0.07" Height="0.182" Width="2.131" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>awQAxkMkAMDiQwZEJEMCFCBoAJQiDACEIAAgACggIEI=</HashCode>
+      <FileName>RFI\RequestForInformation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="From" />
+      <Property Name="Contractor" />
+      <Property Name="SpecSection" />
+      <Property Name="Status" />
+      <Property Name="NumberSpecification" />
+      <Property Name="DateToFieldSpecification" />
+      <Property Name="QuestionAnswerSpecification" />
+      <Property Name="DeliveryMethod" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="CopyToList" />
+      <Property Name="RoutingItems" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SmartCA.Model.Companies.Company" Collapsed="true">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AGBAgABAQIAAAAAAAAAAQAQAAEAMIAAACAAAAAAAACA=</HashCode>
+      <FileName>Companies\Company.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCA.Model.RFI.RequestForInformationQuestionAnswerSpecification">
+    <Position X="0.5" Y="3" Width="3.75" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAABAAAAAA=</HashCode>
+      <FileName>RFI\RequestForInformationQuestionAnswerSpecification.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SmartCA.Model.RFI.RequestForInformationDateSpecification">
+    <Position X="0.5" Y="5.5" Width="3" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAABAAAAAA=</HashCode>
+      <FileName>RFI\RequestForInformationDateSpecification.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SmartCA.Model.Submittals.SpecificationSection" Collapsed="true">
+    <Position X="10.5" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAgQEQAIEAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Submittals\SpecificationSection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCA.Model.ItemStatus" Collapsed="true">
+    <Position X="10.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAEAAAAAAAAgAAAAAAAAAAAAIAAAAAAAAAAAiA=</HashCode>
+      <FileName>ItemStatus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCA.Model.Projects.ProjectContact" Collapsed="true">
+    <Position X="1.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAACAAACAgAAAgAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Projects\ProjectContact.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCA.Model.RFI.RequestForInformationNumberSpecification">
+    <Position X="6.25" Y="7.5" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAABAAAAAA=</HashCode>
+      <FileName>RFI\RequestForInformationNumberSpecification.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SmartCA.Model.CopyTo" Collapsed="true">
+    <Position X="10.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAEiAAAAAgAAAAAAIAAAAAAAAAAIiA=</HashCode>
+      <FileName>CopyTo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCA.Model.RoutingItem" Collapsed="true">
+    <Position X="3.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAIAgAAAAIAwAQAAIAEAAAAAAAQAAAAEAAAAAAgCAA=</HashCode>
+      <FileName>RoutingItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="SmartCA.Model.Delivery" Collapsed="true">
+    <Position X="10.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAgCAAAAAAAAAAAAAAAAAAAAAAAAAAAQEAAAE=</HashCode>
+      <FileName>Delivery.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

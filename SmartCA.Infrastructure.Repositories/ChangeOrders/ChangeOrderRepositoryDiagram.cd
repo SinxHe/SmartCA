@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SmartCA.Infrastructure.Repositories.ChangeOrderRepository" Collapsed="true">
+    <Position X="7.5" Y="4.75" Width="2.25" />
+    <InheritanceLine Type="SmartCA.Infrastructure.Repositories.SqlCeRepositoryBase&lt;T&gt;" FixedToPoint="true">
+      <Path>
+        <Point X="8.5" Y="2.941" />
+        <Point X="8.5" Y="4.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>BJBCAAAACAAAAAggAEAAAAAAEAAgAAEAAgAAAAAABAA=</HashCode>
+      <FileName>ChangeOrders\ChangeOrderRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Left" Position="0.1" />
+  </Class>
+  <Class Name="SmartCA.Infrastructure.Repositories.SqlCeRepositoryBase&lt;T&gt;" Collapsed="true">
+    <Position X="7.5" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AJRACSAACEAAAChgAEgQAAgIwAAgIABDAAAAABAEAAg=</HashCode>
+      <FileName>SqlCeRepositoryBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCA.Infrastructure.RepositoryFramework.RepositoryBase&lt;T&gt;" Collapsed="true">
+    <Position X="7.75" Y="1" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Orientation="Left" Position="0.1" />
+  </Class>
+  <Interface Name="SmartCA.Model.INumberedProjectChildRepository&lt;T&gt;">
+    <Position X="1" Y="1" Width="3" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="SmartCA.Model.ChangeOrders.IChangeOrderRepository" Collapsed="true">
+    <Position X="3" Y="4.5" Width="3" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="SmartCA.Infrastructure.RepositoryFramework.IRepository&lt;T&gt;" Collapsed="true">
+    <Position X="4.75" Y="1" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

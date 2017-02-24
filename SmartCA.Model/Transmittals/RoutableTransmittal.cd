@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SmartCA.Model.Transmittals.Transmittal">
+    <Position X="5.75" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AQAARgEAAEAAAgJAAAICRAAAAAAEAAAAIAAgACAAIAI=</HashCode>
+      <FileName>Transmittals\Transmittal.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Left" Position="0.227" />
+  </Class>
+  <Class Name="SmartCA.Model.Transmittals.RoutableTransmittal">
+    <Position X="6" Y="4.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transmittals\RoutableTransmittal.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Left" Position="0.1" />
+  </Class>
+  <Interface Name="SmartCA.Model.Transmittals.ITransmittal">
+    <Position X="3" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AQAABgAAAEAAAgBAAAACQAAAAAAAAAAAAAAgACAAAAA=</HashCode>
+      <FileName>Transmittals\ITransmittal.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SmartCA.Model.Transmittals.IRoutableTransmittal">
+    <Position X="3" Y="4.75" Width="1.75" />
+    <InheritanceLine Type="SmartCA.Model.Transmittals.ITransmittal" FixedToPoint="true">
+      <Path>
+        <Point X="4" Y="3.334" />
+        <Point X="4" Y="4.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transmittals\IRoutableTransmittal.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

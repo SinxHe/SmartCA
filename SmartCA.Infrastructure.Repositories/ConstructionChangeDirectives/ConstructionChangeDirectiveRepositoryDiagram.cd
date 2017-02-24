@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SmartCA.Infrastructure.Repositories.ConstructionChangeDirectiveRepository" Collapsed="true">
+    <Position X="7.5" Y="5" Width="4.5" />
+    <InheritanceLine Type="SmartCA.Infrastructure.Repositories.Transmittals.SqlCeTransmittalRepository&lt;T&gt;" FixedToPoint="true">
+      <Path>
+        <Point X="9.625" Y="3.941" />
+        <Point X="9.625" Y="5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AJBAAAAACAAAAAggAEAAAAAAAACgAIAAAgAAAAAAAAA=</HashCode>
+      <FileName>ConstructionChangeDirectives\ConstructionChangeDirectiveRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Left" Position="0.142" />
+  </Class>
+  <Class Name="SmartCA.Infrastructure.Repositories.Transmittals.SqlCeTransmittalRepository&lt;T&gt;" Collapsed="true">
+    <Position X="8.5" Y="3.25" Width="2.25" />
+    <InheritanceLine Type="SmartCA.Infrastructure.Repositories.SqlCeRepositoryBase&lt;T&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9.5" Y="2.441" />
+        <Point X="9.5" Y="3.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAEAAAAAAAAAAAAAAEAABAAgAAAA=</HashCode>
+      <FileName>Transmittals\SqlCeTransmittalRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCA.Infrastructure.Repositories.SqlCeRepositoryBase&lt;T&gt;" Collapsed="true">
+    <Position X="8.5" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AJRACSAACEAAAChgAEgQAAgIwAAgIABDAAAAABAEAAg=</HashCode>
+      <FileName>SqlCeRepositoryBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCA.Infrastructure.RepositoryFramework.RepositoryBase&lt;T&gt;" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Orientation="Left" Position="0.1" />
+  </Class>
+  <Interface Name="SmartCA.Model.ConstructionChangeDirectives.IConstructionChangeDirectiveRepository" Collapsed="true">
+    <Position X="1.25" Y="5" Width="3.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="SmartCA.Model.NumberedProjectChildren.INumberedProjectChildRepository&lt;T&gt;" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="SmartCA.Infrastructure.RepositoryFramework.IRepository&lt;T&gt;" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
