@@ -135,11 +135,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SmartCA.sdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
@@ -168,6 +163,11 @@
     <None Include="RFI\RequestForInformationRepositoryDiagram.cd" />
     <None Include="SmartCADbTables.sqlce" />
     <None Include="Submittals\SubmittalRepositoryDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SmartCA.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
